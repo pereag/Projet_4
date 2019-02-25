@@ -1,0 +1,95 @@
+{% extends 'base.html.twig' %}
+
+{% set linkHome = none %} 
+{% set linkTicketing = 'active' %}
+
+{% block title %}Billeterie : Panier{% endblock %}
+
+{% block body %}
+    <div id="banner-ticketing" class="container-fluid">
+        <div id="banner-ticketing-content">
+            <h1>Finalisation de votre commande</h1>
+            <p>Veuillez compléter les champs ci-dessous. Après confirmation de votre commande </br> vos billets vous serons via votre messagerie. </p>
+        </div>
+    </div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb" id="breadcrumb">
+            <li class="breadcrumb-item"><a href="../">Accueil</a></li>
+            <li class="breadcrumb-item active"><a href="../ticketing">Billeterie</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Panier</li>
+        </ol>
+    </nav>
+    <div id="body">
+        <div id="ticketing-content">
+            <div class="row" id="ticket-place">
+                <div class="col-md-6 block-contenair-small-right">
+                    <div class="col-md-12 block-contenair-small">
+                        <h2>Billet demi-journée</h2>
+                        <form action="/ticketing/pannier" methode="get">
+                            <div class="form-row">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Nom">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Prenom">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="date" class="form-control" id="input-date">
+                                    <small>Entrez la date de Naissance de la personne.</small>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6 block-contenair-small-left">
+                    <div class="col-md-12 block-contenair-small">
+                        <h2>Billet demi-journée</h2>
+                        <form action="/ticketing/pannier" methode="get">
+                            <div class="form-row">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Nom">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Prenom">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="date" class="form-control" id="input-date">
+                                    <small>Entrez la date de Naissance de la personne.</small>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Type de billet</th>
+                        <th scope="col">Temps de visite</th>
+                        <th scope="col">Quantité</th>
+                        <th scope="col">Prix</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Billet normal ( à partir de 12 ans )</td>
+                        <td>Demi-journée</td>
+                        <td>1</td>
+                        <td>18 euros</td>
+                    </tr>
+                    <tr>
+                        <td>Billet enfant ( de 4 à 12 ans )</td>
+                        <td>Demi-journée</td>
+                        <td>1</td>
+                        <td>10 euros</td>
+                    </tr>
+                    <tr><td class="final-cost">Total TTC </td>
+                        <td></td>
+                        <td></td>
+                        <td class="final-cost">28 euros</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

@@ -7,5 +7,9 @@ home:
   controller: App\Controller\HomeController::index
 
 Ticketing:
-  path: /billeterie/
+  path: /ticketing/
   controller: App\Controller\TicketingController::index
+
+Pannier:
+  path: /ticketing/pannier
+  controller: App\Controller\TicketingController::pannier

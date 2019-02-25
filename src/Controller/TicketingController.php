@@ -14,7 +14,12 @@ class TicketingController
 
     public function index(): Response
     {
-        return new response($this->twig->render('page/Ticketing.html.twig'));
+        return new response($this->twig->render('page/ticketing.html.twig'));
+    }
+
+    public function pannier(): Response
+    {
+        return new response($this->twig->render('page/pannier.html.twig'));
     }
 
 }

@@ -1,7 +1,20 @@
 {% extends 'base.html.twig' %} 
 
+{% set linkHome = 'active' %} 
+{% set linkTicketing = none %}
+
 {% block title %}Accueil{% endblock %}
 
-{% block body %}<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-
-</div>{% endblock %}
+{% block body %}
+    <div id ="banner" class"container-fluid">
+         <div id="banner-content">   
+            <span>Bienvenue au</span>
+            <h1>Musée du Louvre</h1>
+            <p>
+                Entrez dans le musée le plus visité de d'Europe pour découvrir l'art et l'histoire 
+                comme vous ne l'avez jamais vue.
+            </p>
+            <a href="/ticketing"><div class="btn btn-ticketing">Billeterie</div></a>
+        </div>
+    </div>
+{% endblock %}
