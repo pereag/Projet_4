@@ -53,16 +53,12 @@ a:hover {
     width:100%;
 }
 
-#banner span { 
-    font-size: 3rem;
-    color: #FFFFFF;
- }
-
 #banner h1 {
-    font-size: 4.2rem;
+    font-size: 4rem;
     margin-top: 1.1rem;
     margin-bottom: 1.2rem;
     font-weight: bold;
+    padding: 1rem 1rem 1rem 1rem;
 }
 
 #banner p {
@@ -72,9 +68,12 @@ a:hover {
     display: block;
     margin-right: auto;
     margin-left: auto;
+    padding: 0rem 1rem 0rem 1rem;
 }
 
-#banner-content { padding-top:250px; }
+#banner-content { 
+    padding-top:260px;
+ }
 
 .btn-ticketing {
     background-color: #B20D38;
@@ -119,7 +118,7 @@ a:hover {
     margin:auto;
 }
 
-#ticketing-content tr:hover {
+#ticket-price tr:hover {
     background-color: #D22652;
     color: white;
 }
