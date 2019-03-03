@@ -3,19 +3,19 @@
 {% set linkHome = none %} 
 {% set linkTicketing = 'active' %}
 
-{% block title %}Billeterie{% endblock %}
+{% block title %}{% trans %}Billeterie{% endtrans %}{% endblock %}
 
 {% block body %}
     <div id="banner-ticketing" class="container-fluid">
         <div id="banner-ticketing-content">
-            <h1>Billeterie du Louvre</h1>
-            <p>Bienvenue sur notre billetterie. Des tarifs réduits<br> vous sont proposez ci-dessous.</p>
+            <h1>{% trans %}Billeterie{% endtrans %}</h1>
+            <p>{% trans %}Bienvenue sur notre billetterie. Des tarifs réduits{% endtrans %}<br> {% trans %}vous sont proposez ci-dessous.{% endtrans %}</p>
         </div>
     </div>
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb" id="breadcrumb">
-            <li class="breadcrumb-item"><a href="../">Accueil</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Billeterie</li>
+            <li class="breadcrumb-item"><a href="../">{% trans %}Accueil{% endtrans %}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{% trans %}Billeterie{% endtrans %}</li>
         </ol>
     </nav>
     <div id="body">
@@ -23,46 +23,46 @@
             <table class="table" id="ticket-price">
                 <thead class="thead-dark">
                     <tr>
-                        <th scope="col">Type de billet</th>
-                        <th scope="col">Prix de la journée complète</th>
-                        <th scope="col">Prix demi-journée</th>
+                        <th scope="col">{% trans %}Type de billet{% endtrans %}</th>
+                        <th scope="col">{% trans %}Prix de la journée complète{% endtrans %}</th>
+                        <th scope="col">{% trans %}Prix demi-journée{% endtrans %}</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Billet normal ( à partir de 12 ans )</td>
+                        <td>{% trans %}Billet normal ( à partir de 12 ans ){% endtrans %}</td>
                         <td>18 euros</td>
                         <td>16 euros</td>
                     </tr>
                     <tr>
-                        <td>Billet enfant ( de 4 à 12 ans )</td>
+                        <td>{% trans %}Billet enfant ( de 4 à 12 ans ){% endtrans %}</td>
                         <td>10 euros</td>
                         <td>8 euros</td>
                     </tr>
                     <tr>
-                        <td>Billet jeune age ( moins de 4 ans )</td>
-                        <td>Gratuit</td>
-                        <td>Gratuit</td>
+                        <td>{% trans %}Billet jeune age ( moins de 4 ans ){% endtrans %}</td>
+                        <td>{% trans %}Gratuit{% endtrans %}</td>
+                        <td>{% trans %}Gratuit{% endtrans %}</td>
                     </tr>
                     <tr>
-                        <td>Billet sénior ( moins de 60 ans )</td>
+                        <td>{% trans %}Billet sénior ( moins de 60 ans ){% endtrans %}</td>
                         <td>15 euros</td>
                         <td>12 euros</td>
                     </tr>
                     <tr>
-                        <td>Billet tarif réduit ( étudiant, militaire, employer du musée )</td>
+                        <td>{% trans %}Billet tarif réduit ( étudiant, militaire, employer du musée ){% endtrans %}</td>
                         <td>12 euros</td>
                         <td>10 euros</td>
                     </tr>
                 </tbody>
             </table>
             <div class="block-contenair">
-                <h2>Choix des billets</h2>
+                <h2>{% trans %}Choix des billets{% endtrans %}</h2>
                 <form action="/ticketing/pannier" methode="get">
                     <div class="form-row">
                         <div class=" form-group col-md-6">
                             <select class="form-control" id="input-number-tickets">
-                                <option>Nombre de billets</option>
+                                <option>{% trans %}Nombre de billets{% endtrans %}</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -77,20 +77,20 @@
                         </div>
                         <div class="form-group col-md-6">
                             <select class="form-control" id="input-type-visit">
-                                <option value="false">Durée de la visite</option>
-                                <option value="half-day">Demi-journée</option>
-                                <option value="all-day">Journée complète</option>
+                                <option value="false">{% trans %}Durée de la visite{% endtrans %}</option>
+                                <option value="half-day">{% trans %}Demi-journée{% endtrans %}</option>
+                                <option value="all-day">{% trans %}Journée complète{% endtrans %}</option>
                             </select>
                         </div>
                         <div class="form-group col-md-6">
                             <input type="date" class="form-control" id="input-date">
-                            <small>Entrez la date de la visite.</small>
+                            <small>{% trans %}Entrez la date de la visite.{% endtrans %}</small>
                         </div>
                         <div class="form-group col-md-6">
                             <input type="time" class="form-control" id="input-time" value="00:00">
-                            <small>Entrez l'heure de la visite.</small>
+                            <small>{% trans %}Entrez l'heure de la visite.{% endtrans %}</small>
                         </div>
-                        <button class="btn btn-danger" id="ticket-generation-button">Générer les billets</button>
+                        <button class="btn btn-danger" id="ticket-generation-button">{% trans %}Générer les billets{% endtrans %}</button>
                     </div>
                 </form>
             </div>

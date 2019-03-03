@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Musée du Louvre | {% block title %}{% endblock %}</title>
+        <title>{% trans %}Musée du Louvre{% endtrans %} | {% block title %}{% endblock %}</title>
         <link rel="icon" type="image/png" href="{{ asset("images/favicon.png") }}" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="{{ asset("css/style.css") }}">
@@ -17,10 +17,10 @@
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                     <ul class="navbar-nav mr-auto mt-1 mt-lg-0">
                         <li class="nav-item {{ linkHome }}">
-                            <a class="nav-link" href="/">Accueil <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="/"> {% trans %} Accueil {% endtrans %}<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item {{ linkTicketing }}">
-                            <a class="nav-link" href="/ticketing">Billeterie<span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="/ticketing"> {% trans %} Billeterie {% endtrans %} <span class="sr-only">(current)</span></a>
                         </li>
                     </ul>
                 </div>
@@ -48,9 +48,9 @@
                 </div>
                 <div class="col-sm footer-contents" id="footer-content-4">
                     Copyright © 2018<br>
-                    Musée du Louvre<br>
-                    Tous droits réservés<br>
-                    <a href="#">Mentions légale</a><br>
+                    {% trans %}Musée du Louvre{% endtrans %}<br>
+                    {% trans %}Tous droits réservés{% endtrans %}<br>
+                    <a href="#">{% trans %}Mentions légale{% endtrans %}</a><br>
                 </div>
                 <div class="col-sm-2"></div>
             </div>

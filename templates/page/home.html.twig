@@ -3,18 +3,17 @@
 {% set linkHome = 'active' %} 
 {% set linkTicketing = none %}
 
-{% block title %}Accueil{% endblock %}
+{% block title %}{% trans %}Accueil{% endtrans %}{% endblock %}
 
 {% block body %}
     <div id ="banner" class"container-fluid">
          <div id="banner-content">   
           
-            <h1>Bienvenue au Musée du Louvre</h1>
+            <h1>{% trans %} Bienvenue au Musée du Louvre {% endtrans %}</h1>
             <p>
-                Entrez dans le musée le plus visité de d'Europe pour découvrir l'art et l'histoire 
-                comme vous ne l'avez jamais vue.
+                {% trans %}Entrez dans le musée le plus connue d'Europe pour découvrir l'art et l'histoire comme vous ne l'avez jamais vue.{% endtrans %}
             </p>
-            <a href="/ticketing"><div class="btn btn-ticketing">Billeterie</div></a>
+            <a href="/ticketing"><div class="btn btn-ticketing">{% trans %}Billeterie{% endtrans %}</div></a>
         </div>
     </div>
 {% endblock %}
