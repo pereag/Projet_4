@@ -3,13 +3,19 @@
 #    controller: App\Controller\DefaultController::index
 
 home:
-  path: /
+  path: [/{_locale}, /]
   controller: App\Controller\HomeController::index
+  requirements:
+    _locale: fr|en
 
 Ticketing:
-  path: /ticketing/
+  path: /{_locale}/ticketing
   controller: App\Controller\TicketingController::index
+  requirements:
+    _locale: fr|en
 
 Pannier:
-  path: /ticketing/pannier
+  path: /{_locale}/ticketing/pannier
   controller: App\Controller\TicketingController::pannier
+  requirements:
+    _locale: fr|en

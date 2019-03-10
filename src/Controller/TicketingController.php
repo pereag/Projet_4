@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
 
 class TicketingController
 {
@@ -12,14 +13,16 @@ class TicketingController
         $this->twig = $twig;
     }
 
-    public function index(): Response
+    public function index(Request $request ): Response
     {
-        return new response($this->twig->render('page/ticketing.html.twig'));
+        $locale = $request->getLocale();
+        return new response($this->twig->render('page/ticketing.html.twig', array('locale' => $locale)));
     }
 
-    public function pannier(): Response
+    public function pannier(Request $request): Response
     {
-        return new response($this->twig->render('page/pannier.html.twig'));
+        $locale = $request->getLocale();
+        return new response($this->twig->render('page/pannier.html.twig', array('locale' => $locale) ));
     }
 
 }

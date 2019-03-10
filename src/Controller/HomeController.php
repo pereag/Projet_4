@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
 
 class HomeController
 {
@@ -12,9 +13,10 @@ class HomeController
         $this->twig = $twig;
     }
 
-    public function index(): Response
+    public function index(Request $request): Response
     {
-        return new response($this->twig->render('page/home.html.twig'));
+        $locale = $request->getLocale();
+        return new response($this->twig->render('page/home.html.twig', array('locale' => $locale)));
     }
 
 }

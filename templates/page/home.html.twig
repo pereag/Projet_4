@@ -2,6 +2,8 @@
 
 {% set linkHome = 'active' %} 
 {% set linkTicketing = none %}
+{% set frenchLink = '/fr' %}
+{% set englishLink = '/en' %}
 
 {% block title %}{% trans %}Accueil{% endtrans %}{% endblock %}
 
@@ -13,7 +15,7 @@
             <p>
                 {% trans %}Entrez dans le musée le plus connue d'Europe pour découvrir l'art et l'histoire comme vous ne l'avez jamais vue.{% endtrans %}
             </p>
-            <a href="/ticketing"><div class="btn btn-ticketing">{% trans %}Billeterie{% endtrans %}</div></a>
+            <a href="/{{ locale }}/ticketing"><div class="btn btn-ticketing">{% trans %}Billeterie{% endtrans %}</div></a>
         </div>
     </div>
 {% endblock %}

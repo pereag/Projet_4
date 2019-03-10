@@ -2,14 +2,16 @@
 
 {% set linkHome = none %} 
 {% set linkTicketing = 'active' %}
+{% set frenchLink = '/fr/ticketing/pannier' %}
+{% set englishLink = '/en/ticketing/pannier' %}
 
 {% block title %}{% trans %}Billeterie{% endtrans %} : {% trans %}Panier{% endtrans %}{% endblock %}
 
 {% block body %}
     <div id="banner-ticketing" class="container-fluid">
         <div id="banner-ticketing-content">
-            <h1>{% trans %}Finalisation de votre commande{% endtrans %}</h1>
-            <p>{% trans %}Veuillez compléter les champs ci-dessous. Après confirmation de votre commande{% endtrans %} </br> {% trans %}vos billets vous serons via votre messagerie.{% endtrans %} </p>
+            <h1>{% trans %} Finalisation de votre commande {% endtrans %}</h1>
+            <p>{% trans %} Veuillez compléter les champs ci-dessous. Après confirmation de votre commande {% endtrans %} </br> {% trans %}vos billets vous serons via votre messagerie.{% endtrans %} </p>
         </div>
     </div>
     <nav aria-label="breadcrumb">
@@ -24,7 +26,7 @@
             <div class="row" id="ticket-place">
                 <div class="col-md-6 block-contenair-small-right">
                     <div class="col-md-12 block-contenair-small">
-                        <h2>{% trans %}Billet demi-journée{% endtrans %}</h2>
+                        <h2>{% trans %} Billet demi-journée {% endtrans %}</h2>
                         <form action="/ticketing/pannier" methode="get">
                             <div class="form-row">
                                 <div class="col-md-6">

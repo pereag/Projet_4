@@ -2,6 +2,8 @@
 
 {% set linkHome = none %} 
 {% set linkTicketing = 'active' %}
+{% set frenchLink = '/fr/ticketing' %}
+{% set englishLink = '/en/ticketing' %}
 
 {% block title %}{% trans %}Billeterie{% endtrans %}{% endblock %}
 
@@ -14,7 +16,7 @@
     </div>
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb" id="breadcrumb">
-            <li class="breadcrumb-item"><a href="../">{% trans %}Accueil{% endtrans %}</a></li>
+            <li class="breadcrumb-item"><a href="../{{ locale }}">{% trans %}Accueil{% endtrans %}</a></li>
             <li class="breadcrumb-item active" aria-current="page">{% trans %}Billeterie{% endtrans %}</li>
         </ol>
     </nav>
@@ -58,7 +60,7 @@
             </table>
             <div class="block-contenair">
                 <h2>{% trans %}Choix des billets{% endtrans %}</h2>
-                <form action="/ticketing/pannier" methode="get">
+                <form action="/{{ locale }}/ticketing/pannier" methode="get">
                     <div class="form-row">
                         <div class=" form-group col-md-6">
                             <select class="form-control" id="input-number-tickets">
