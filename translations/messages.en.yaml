@@ -1,16 +1,17 @@
 Musée du Louvre: Louvre Museum
 Accueil: Home
-Billeterie: Ticketing
+Billetterie: Ticketing
 Bienvenue au Musée du Louvre: Welcome to the Louvre Museum
 Tous droits réservés: All rights reserved
-Mentions légale: Legal notice
-Entrez dans le musée le plus connue d'Europe pour découvrir l'art et l'histoire comme vous ne l'avez jamais vue. : Enter the most famous museum in Europe to discover art and history as you have never seen.
+Mentions légales: Legal notice
+Entrez dans le musée le plus connu d'Europe pour découvrir l'art et l'histoire comme vous ne l'avez jamais vue. : Enter the most famous museum in Europe to discover art and history as you have never seen.
 Panier: Pannier
-Bienvenue sur notre billetterie. Des tarifs réduits: Welcome to our ticket office. Discounted rates
-vous sont proposez ci-dessous.: you are proposing below.
+Billetterie du Louvre: Louvre Ticket Office
+Le musée du Louvre est Ouvert de 8h à 20h tous les jours de l'année: The Louvre Museum is open from 8h to 20h every day of the year
+sauf le mardi, le 1er novembre et le 25 décembre.: except Tuesday, November 1st and December 25th.
 Type de billet: Ticket type
 Prix de la journée complète: Price of the full day 
-Prix demi-journée: Half day price
+Prix de la demi-journée: Price of the Half day
 Billet normal ( à partir de 12 ans ): Normal ticket (from 12 years old)
 Billet enfant ( de 4 à 12 ans ): Child ticket (from 4 to 12 years old)
 Billet jeune age ( moins de 4 ans ): Small child ticket (under 4 years old)
@@ -27,7 +28,7 @@ Entrez l'heure de la visite.: Enter the time of the visit.
 Générer les billets: Generate tickets
 Finalisation de votre commande: Finalizing your order
 Veuillez compléter les champs ci-dessous. Après confirmation de votre commande: Please complete the fields below. After confirming your order
-vos billets vous serons via votre messagerie.: your tickets will be via your email.
+vos billets vous seront envoyés via votre messagerie.: your tickets will be sent to you via your mail.
 Entrez la date de Naissance de la personne.: Enter the date of birth of the person.
 Tarif réduit (étudiant, militaire, employé du musée...): Reduced rate (student, military, museum employee ...)
 Billet demi-journée: Half day ticket
@@ -36,6 +37,7 @@ Prix: Price
 Total TTC: Total Price
 Nom: Name
 Prenom: First name
+Passer au paiement: Switch to payment
 Pays: Country
 Temps de visite: Visiting time
 France: La France

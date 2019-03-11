@@ -5,29 +5,309 @@
 {% set frenchLink = '/fr/ticketing/pannier' %}
 {% set englishLink = '/en/ticketing/pannier' %}
 
-{% block title %}{% trans %}Billeterie{% endtrans %} : {% trans %}Panier{% endtrans %}{% endblock %}
+{% block title %}{% trans %}Billetterie{% endtrans %} : {% trans %}Panier{% endtrans %}{% endblock %}
 
 {% block body %}
     <div id="banner-ticketing" class="container-fluid">
         <div id="banner-ticketing-content">
             <h1>{% trans %} Finalisation de votre commande {% endtrans %}</h1>
-            <p>{% trans %} Veuillez compléter les champs ci-dessous. Après confirmation de votre commande {% endtrans %} </br> {% trans %}vos billets vous serons via votre messagerie.{% endtrans %} </p>
+            <p>{% trans %} Veuillez compléter les champs ci-dessous. Après confirmation de votre commande {% endtrans %} </br> {% trans %}vos billets vous seront envoyés via votre messagerie.{% endtrans %} </p>
         </div>
     </div>
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb" id="breadcrumb">
             <li class="breadcrumb-item"><a href="../">{% trans %}Accueil{% endtrans %}</a></li>
-            <li class="breadcrumb-item active"><a href="../ticketing">{% trans %}Billeterie{% endtrans %}</a></li>
+            <li class="breadcrumb-item active"><a href="../ticketing">{% trans %}Billetterie{% endtrans %}</a></li>
             <li class="breadcrumb-item active" aria-current="page">{% trans %}Panier{% endtrans %}</li>
         </ol>
     </nav>
     <div id="body">
-        <div id="ticketing-content">
-            <div class="row" id="ticket-place">
-                <div class="col-md-6 block-contenair-small-right">
-                    <div class="col-md-12 block-contenair-small">
-                        <h2>{% trans %} Billet demi-journée {% endtrans %}</h2>
-                        <form action="/ticketing/pannier" methode="get">
+        <form action="#" methode="get">
+            <div id="ticketing-content">
+                <div class="row" id="ticket-place">
+                    <div class="col-md-6 block-contenair-small-right">
+                        <div class="col-md-12 block-contenair-small">
+                            <h2>{% trans %} Billet demi-journée {% endtrans %}</h2>
+                            <div class="form-row">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="{% trans %}Nom{% endtrans %}">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="{% trans %}Prenom{% endtrans %}">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="date" class="form-control" id="input-date">
+                                    <small>{% trans %}Entrez la date de Naissance de la personne.{% endtrans %}</small>
+                                </div>
+                                <div class="col-md-6">
+                                    <select type="text" class="form-control">
+                                        <option value="false">{% trans %}Pays{% endtrans %}</option>
+                                        <option value="FR">{% trans %}France{% endtrans %}</option>
+                                        <option value="AF">{% trans %}Afghanistan{% endtrans %}</option>
+                                        <option value="ZA">{% trans %}Afrique du Sud{% endtrans %}</option>
+                                        <option value="AL">{% trans %}Albanie{% endtrans %}</option>
+                                        <option value="DZ">{% trans %}Algérie{% endtrans %}</option>
+                                        <option value="DE">{% trans %}Allemagne{% endtrans %}</option>
+                                        <option value="AD">{% trans %}Andorre{% endtrans %}</option>
+                                        <option value="AO">{% trans %}Angola{% endtrans %}</option>
+                                        <option value="AI">{% trans %}Anguilla{% endtrans %}</option>
+                                        <option value="AQ">{% trans %}Antarctique{% endtrans %}</option>
+                                        <option value="AG">{% trans %}Antigua-et-Barbuda{% endtrans %}</option>
+                                        <option value="SA">{% trans %}Arabie saoudite{% endtrans %}</option>
+                                        <option value="AR">{% trans %}Argentine{% endtrans %}</option>
+                                        <option value="AM">{% trans %}Arménie{% endtrans %}</option>
+                                        <option value="AW">{% trans %}Aruba{% endtrans %}</option>
+                                        <option value="AU">{% trans %}Australie{% endtrans %}</option>
+                                        <option value="AT">{% trans %}Autriche{% endtrans %}</option>
+                                        <option value="AZ">{% trans %}Azerbaïdjan{% endtrans %}</option>
+                                        <option value="BS">{% trans %}Bahamas{% endtrans %}</option>
+                                        <option value="BH">{% trans %}Bahreïn{% endtrans %}</option>
+                                        <option value="BD">{% trans %}Bangladesh{% endtrans %}</option>
+                                        <option value="BB">{% trans %}Barbade{% endtrans %}</option>
+                                        <option value="BE">{% trans %}Belgique{% endtrans %}</option>
+                                        <option value="BZ">{% trans %}Belize{% endtrans %}</option>
+                                        <option value="BJ">{% trans %}Bénin{% endtrans %}</option>
+                                        <option value="BM">{% trans %}Bermudes{% endtrans %}</option>
+                                        <option value="BT">{% trans %}Bhoutan{% endtrans %}</option>
+                                        <option value="BY">{% trans %}Biélorussie{% endtrans %}</option>
+                                        <option value="BO">{% trans %}Bolivie{% endtrans %}</option>
+                                        <option value="BA">{% trans %}Bosnie-Herzégovine{% endtrans %}</option>
+                                        <option value="BW">{% trans %}Botswana{% endtrans %}</option>
+                                        <option value="BR">{% trans %}Brésil{% endtrans %}</option>
+                                        <option value="BN">{% trans %}Brunéi Darussalam{% endtrans %}</option>
+                                        <option value="BG">{% trans %}Bulgarie{% endtrans %}</option>
+                                        <option value="BF">{% trans %}Burkina Faso{% endtrans %}</option>
+                                        <option value="BI">{% trans %}Burundi{% endtrans %}</option>
+                                        <option value="KH">{% trans %}Cambodge{% endtrans %}</option>
+                                        <option value="CM">{% trans %}Cameroun{% endtrans %}</option>
+                                        <option value="CA">{% trans %}Canada{% endtrans %}</option>
+                                        <option value="CV">{% trans %}Cap-Vert{% endtrans %}</option>
+                                        <option value="EA">{% trans %}Ceuta et Melilla{% endtrans %}</option>
+                                        <option value="CL">{% trans %}Chili{% endtrans %}</option>
+                                        <option value="CN">{% trans %}Chine{% endtrans %}</option>
+                                        <option value="CY">{% trans %}Chypre{% endtrans %}</option>
+                                        <option value="CO">{% trans %}Colombie{% endtrans %}</option>
+                                        <option value="KM">{% trans %}Comores{% endtrans %}</option>
+                                        <option value="CG">{% trans %}Congo-Brazzaville{% endtrans %}</option>
+                                        <option value="CD">{% trans %}Congo-Kinshasa{% endtrans %}</option>
+                                        <option value="KP">{% trans %}Corée du Nord{% endtrans %}</option>
+                                        <option value="KR">{% trans %}Corée du Sud{% endtrans %}</option>
+                                        <option value="CR">{% trans %}Costa Rica{% endtrans %}</option>
+                                        <option value="CI">{% trans %}Côte d’Ivoire{% endtrans %}</option>
+                                        <option value="HR">{% trans %}Croatie{% endtrans %}</option>
+                                        <option value="CU">{% trans %}Cuba{% endtrans %}</option>
+                                        <option value="CW">{% trans %}Curaçao{% endtrans %}</option>
+                                        <option value="DK">{% trans %}Danemark{% endtrans %}</option>
+                                        <option value="DG">{% trans %}Diego Garcia{% endtrans %}</option>
+                                        <option value="DJ">{% trans %}Djibouti{% endtrans %}</option>
+                                        <option value="DM">{% trans %}Dominique{% endtrans %}</option>
+                                        <option value="EG">{% trans %}Égypte{% endtrans %}</option>
+                                        <option value="SV">{% trans %}El Salvador{% endtrans %}</option>
+                                        <option value="AE">{% trans %}Émirats arabes unis{% endtrans %}</option>
+                                        <option value="EC">{% trans %}Équateur{% endtrans %}</option>
+                                        <option value="ER">{% trans %}Érythrée{% endtrans %}</option>
+                                        <option value="ES">{% trans %}Espagne{% endtrans %}</option>
+                                        <option value="EE">{% trans %}Estonie{% endtrans %}</option>
+                                        <option value="VA">{% trans %}État de la Cité du Vatican{% endtrans %}</option>
+                                        <option value="FM">{% trans %}États fédérés de Micronésie{% endtrans %}</option>
+                                        <option value="US">{% trans %}États-Unis{% endtrans %}</option>
+                                        <option value="ET">{% trans %}Éthiopie{% endtrans %}</option>
+                                        <option value="EZ">{% trans %}Eurozone{% endtrans %}</option>
+                                        <option value="FJ">{% trans %}Fidji{% endtrans %}</option>
+                                        <option value="FI">{% trans %}Finlande{% endtrans %}</option>
+                                        <option value="GA">{% trans %}Gabon{% endtrans %}</option>
+                                        <option value="GM">{% trans %}Gambie{% endtrans %}</option>
+                                        <option value="GE">{% trans %}Géorgie{% endtrans %}</option>
+                                        <option value="GS">{% trans %}Géorgie du Sud et îles Sandwich du Sud{% endtrans %}</option>
+                                        <option value="GH">{% trans %}Ghana{% endtrans %}</option>
+                                        <option value="GI">{% trans %}Gibraltar{% endtrans %}</option>
+                                        <option value="GR">{% trans %}Grèce{% endtrans %}</option>
+                                        <option value="GD">{% trans %}Grenade{% endtrans %}</option>
+                                        <option value="GL">{% trans %}Groenland{% endtrans %}</option>
+                                        <option value="GP">{% trans %}Guadeloupe{% endtrans %}</option>
+                                        <option value="GU">{% trans %}Guam{% endtrans %}</option>
+                                        <option value="GT">{% trans %}Guatemala{% endtrans %}</option>
+                                        <option value="GG">{% trans %}Guernesey{% endtrans %}</option>
+                                        <option value="GN">{% trans %}Guinée{% endtrans %}</option>
+                                        <option value="GQ">{% trans %}Guinée équatoriale{% endtrans %}</option>
+                                        <option value="GW">{% trans %}Guinée-Bissau{% endtrans %}</option>
+                                        <option value="GY">{% trans %}Guyana{% endtrans %}</option>
+                                        <option value="GF">{% trans %}Guyane française{% endtrans %}</option>
+                                        <option value="HT">{% trans %}Haïti{% endtrans %}</option>
+                                        <option value="HN">{% trans %}Honduras{% endtrans %}</option>
+                                        <option value="HU">{% trans %}Hongrie{% endtrans %}</option>
+                                        <option value="CX">{% trans %}Île Christmas{% endtrans %}</option>
+                                        <option value="AC">{% trans %}Île de l’Ascension{% endtrans %}</option>
+                                        <option value="IM">{% trans %}Île de Man{% endtrans %}</option>
+                                        <option value="NF">{% trans %}Île Norfolk{% endtrans %}</option>
+                                        <option value="AX">{% trans %}Îles Åland{% endtrans %}</option>
+                                        <option value="KY">{% trans %}Îles Caïmans{% endtrans %}</option>
+                                        <option value="IC">{% trans %}Îles Canaries{% endtrans %}</option>
+                                        <option value="CC">{% trans %}Îles Cocos{% endtrans %}</option>
+                                        <option value="CK">{% trans %}Îles Cook{% endtrans %}</option>
+                                        <option value="FO">{% trans %}Îles Féroé{% endtrans %}</option>
+                                        <option value="FK">{% trans %}Îles Malouines{% endtrans %}</option>
+                                        <option value="MP">{% trans %}Îles Mariannes du Nord{% endtrans %}</option>
+                                        <option value="MH">{% trans %}Îles Marshall{% endtrans %}</option>
+                                        <option value="UM">{% trans %}Îles mineures éloignées des États-Unis{% endtrans %}</option>
+                                        <option value="PN">{% trans %}Îles Pitcairn{% endtrans %}</option>
+                                        <option value="SB">{% trans %}Îles Salomon{% endtrans %}</option>
+                                        <option value="TC">{% trans %}Îles Turques-et-Caïques{% endtrans %}</option>
+                                        <option value="VG">{% trans %}Îles Vierges britanniques{% endtrans %}</option>
+                                        <option value="VI">{% trans %}Îles Vierges des États-Unis{% endtrans %}</option>
+                                        <option value="IN">{% trans %}Inde{% endtrans %}</option>
+                                        <option value="ID">{% trans %}Indonésie{% endtrans %}</option>
+                                        <option value="IQ">{% trans %}Irak{% endtrans %}</option>
+                                        <option value="IR">{% trans %}Iran{% endtrans %}</option>
+                                        <option value="IE">{% trans %}Irlande{% endtrans %}</option>
+                                        <option value="IS">{% trans %}Islande{% endtrans %}</option>
+                                        <option value="IL">{% trans %}Israël{% endtrans %}</option>
+                                        <option value="IT">{% trans %}Italie{% endtrans %}</option>
+                                        <option value="JM">{% trans %}Jamaïque{% endtrans %}</option>
+                                        <option value="JP">{% trans %}Japon{% endtrans %}</option>
+                                        <option value="JE">{% trans %}Jersey{% endtrans %}</option>
+                                        <option value="JO">{% trans %}Jordanie{% endtrans %}</option>
+                                        <option value="KZ">{% trans %}Kazakhstan{% endtrans %}</option>
+                                        <option value="KE">{% trans %}Kenya{% endtrans %}</option>
+                                        <option value="KG">{% trans %}Kirghizistan{% endtrans %}</option>
+                                        <option value="KI">{% trans %}Kiribati{% endtrans %}</option>
+                                        <option value="XK">{% trans %}Kosovo{% endtrans %}</option>
+                                        <option value="KW">{% trans %}Koweït{% endtrans %}</option>
+                                        <option value="RE">{% trans %}La Réunion{% endtrans %}</option>
+                                        <option value="LA">{% trans %}Laos{% endtrans %}</option>
+                                        <option value="LS">{% trans %}Lesotho{% endtrans %}</option>
+                                        <option value="LV">{% trans %}Lettonie{% endtrans %}</option>
+                                        <option value="LB">{% trans %}Liban{% endtrans %}</option>
+                                        <option value="LR">{% trans %}Libéria{% endtrans %}</option>
+                                        <option value="LY">{% trans %}Libye{% endtrans %}</option>
+                                        <option value="LI">{% trans %}Liechtenstein{% endtrans %}</option>
+                                        <option value="LT">{% trans %}Lituanie{% endtrans %}</option>
+                                        <option value="LU">{% trans %}Luxembourg{% endtrans %}</option>
+                                        <option value="MK">{% trans %}Macédoine{% endtrans %}</option>
+                                        <option value="MG">{% trans %}Madagascar{% endtrans %}</option>
+                                        <option value="MY">{% trans %}Malaisie{% endtrans %}</option>
+                                        <option value="MW">{% trans %}Malawi{% endtrans %}</option>
+                                        <option value="MV">{% trans %}Maldives{% endtrans %}</option>
+                                        <option value="ML">{% trans %}Mali{% endtrans %}</option>
+                                        <option value="MT">{% trans %}Malte{% endtrans %}</option>
+                                        <option value="MA">{% trans %}Maroc{% endtrans %}</option>
+                                        <option value="MQ">{% trans %}Martinique{% endtrans %}</option>
+                                        <option value="MU">{% trans %}Maurice{% endtrans %}</option>
+                                        <option value="MR">{% trans %}Mauritanie{% endtrans %}</option>
+                                        <option value="YT">{% trans %}Mayotte{% endtrans %}</option>
+                                        <option value="MX">{% trans %}Mexique{% endtrans %}</option>
+                                        <option value="MD">{% trans %}Moldavie{% endtrans %}</option>
+                                        <option value="MC">{% trans %}Monaco{% endtrans %}</option>
+                                        <option value="MN">{% trans %}Mongolie{% endtrans %}</option>
+                                        <option value="ME">{% trans %}Monténégro{% endtrans %}</option>
+                                        <option value="MS">{% trans %}Montserrat{% endtrans %}</option>
+                                        <option value="MZ">{% trans %}Mozambique{% endtrans %}</option>
+                                        <option value="MM">{% trans %}Myanmar (Birmanie){% endtrans %}</option>
+                                        <option value="NA">{% trans %}Namibie{% endtrans %}</option>
+                                        <option value="UN">{% trans %}Nations Unies{% endtrans %}</option>
+                                        <option value="NR">{% trans %}Nauru{% endtrans %}</option>
+                                        <option value="NP">{% trans %}Népal{% endtrans %}</option>
+                                        <option value="NI">{% trans %}Nicaragua{% endtrans %}</option>
+                                        <option value="NE">{% trans %}Niger{% endtrans %}</option>
+                                        <option value="NG">{% trans %}Nigéria{% endtrans %}</option>
+                                        <option value="NU">{% trans %}Niue{% endtrans %}</option>
+                                        <option value="NO">{% trans %}Norvège{% endtrans %}</option>
+                                        <option value="NC">{% trans %}Nouvelle-Calédonie{% endtrans %}</option>
+                                        <option value="NZ">{% trans %}Nouvelle-Zélande{% endtrans %}</option>
+                                        <option value="OM">{% trans %}Oman{% endtrans %}</option>
+                                        <option value="UG">{% trans %}Ouganda{% endtrans %}</option>
+                                        <option value="UZ">{% trans %}Ouzbékistan{% endtrans %}</option>
+                                        <option value="PK">{% trans %}Pakistan{% endtrans %}</option>
+                                        <option value="PW">{% trans %}Palaos{% endtrans %}</option>
+                                        <option value="PA">{% trans %}Panama{% endtrans %}</option>
+                                        <option value="PG">{% trans %}Papouasie-Nouvelle-Guinée{% endtrans %}</option>
+                                        <option value="PY">{% trans %}Paraguay{% endtrans %}</option>
+                                        <option value="NL">{% trans %}Pays-Bas{% endtrans %}</option>
+                                        <option value="BQ">{% trans %}Pays-Bas caribéens{% endtrans %}</option>
+                                        <option value="PE">{% trans %}Pérou{% endtrans %}</option>
+                                        <option value="PH">{% trans %}Philippines{% endtrans %}</option>
+                                        <option value="PL">{% trans %}Pologne{% endtrans %}</option>
+                                        <option value="PF">{% trans %}Polynésie française{% endtrans %}</option>
+                                        <option value="PR">{% trans %}Porto Rico{% endtrans %}</option>
+                                        <option value="PT">{% trans %}Portugal{% endtrans %}</option>
+                                        <option value="QA">{% trans %}Qatar{% endtrans %}</option>
+                                        <option value="HK">{% trans %}R.A.S. chinoise de Hong Kong{% endtrans %}</option>
+                                        <option value="MO">{% trans %}R.A.S. chinoise de Macao{% endtrans %}</option>
+                                        <option value="CF">{% trans %}République centrafricaine{% endtrans %}</option>
+                                        <option value="DO">{% trans %}République dominicaine{% endtrans %}</option>
+                                        <option value="RO">{% trans %}Roumanie{% endtrans %}</option>
+                                        <option value="GB">{% trans %}Royaume-Uni{% endtrans %}</option>
+                                        <option value="RU">{% trans %}Russie{% endtrans %}</option>
+                                        <option value="RW">{% trans %}Rwanda{% endtrans %}</option>
+                                        <option value="EH">{% trans %}Sahara occidental{% endtrans %}</option>
+                                        <option value="BL">{% trans %}Saint-Barthélemy{% endtrans %}</option>
+                                        <option value="KN">{% trans %}Saint-Christophe-et-Niévès{% endtrans %}</option>
+                                        <option value="SM">{% trans %}Saint-Marin{% endtrans %}</option>
+                                        <option value="MF">{% trans %}Saint-Martin{% endtrans %}</option>
+                                        <option value="SX">{% trans %}Saint-Martin (partie néerlandaise){% endtrans %}</option>
+                                        <option value="PM">{% trans %}Saint-Pierre-et-Miquelon{% endtrans %}</option>
+                                        <option value="VC">{% trans %}Saint-Vincent-et-les-Grenadines{% endtrans %}</option>
+                                        <option value="SH">{% trans %}Sainte-Hélène{% endtrans %}</option>
+                                        <option value="LC">{% trans %}Sainte-Lucie{% endtrans %}</option>
+                                        <option value="WS">{% trans %}Samoa{% endtrans %}</option>
+                                        <option value="AS">{% trans %}Samoa américaines{% endtrans %}</option>
+                                        <option value="ST">{% trans %}Sao Tomé-et-Principe{% endtrans %}</option>
+                                        <option value="SN">{% trans %}Sénégal{% endtrans %}</option>
+                                        <option value="RS">{% trans %}Serbie{% endtrans %}</option>
+                                        <option value="SC">{% trans %}Seychelles{% endtrans %}</option>
+                                        <option value="SL">{% trans %}Sierra Leone{% endtrans %}</option>
+                                        <option value="SG">{% trans %}Singapour{% endtrans %}</option>
+                                        <option value="SK">{% trans %}Slovaquie{% endtrans %}</option>
+                                        <option value="SI">{% trans %}Slovénie{% endtrans %}</option>
+                                        <option value="SO">{% trans %}Somalie{% endtrans %}</option>
+                                        <option value="SD">{% trans %}Soudan{% endtrans %}</option>
+                                        <option value="SS">{% trans %}Soudan du Sud{% endtrans %}</option>
+                                        <option value="LK">{% trans %}Sri Lanka{% endtrans %}</option>
+                                        <option value="SE">{% trans %}Suède{% endtrans %}</option>
+                                        <option value="CH">{% trans %}Suisse{% endtrans %}</option>
+                                        <option value="SR">{% trans %}Suriname{% endtrans %}</option>
+                                        <option value="SJ">{% trans %}Svalbard et Jan Mayen{% endtrans %}</option>
+                                        <option value="SZ">{% trans %}Swaziland{% endtrans %}</option>
+                                        <option value="SY">{% trans %}Syrie{% endtrans %}</option>
+                                        <option value="TJ">{% trans %}Tadjikistan{% endtrans %}</option>
+                                        <option value="TW">{% trans %}Taïwan{% endtrans %}</option>
+                                        <option value="TZ">{% trans %}Tanzanie{% endtrans %}</option>
+                                        <option value="TD">{% trans %}Tchad{% endtrans %}</option>
+                                        <option value="CZ">{% trans %}Tchéquie{% endtrans %}</option>
+                                        <option value="TF">{% trans %}Terres australes françaises{% endtrans %}</option>
+                                        <option value="IO">{% trans %}Territoire britannique de l’océan Indien{% endtrans %}</option>
+                                        <option value="PS">{% trans %}Territoires palestiniens{% endtrans %}</option>
+                                        <option value="TH">{% trans %}Thaïlande{% endtrans %}</option>
+                                        <option value="TL">{% trans %}Timor oriental{% endtrans %}</option>
+                                        <option value="TG">{% trans %}Togo{% endtrans %}</option>
+                                        <option value="TK">{% trans %}Tokélaou{% endtrans %}</option>
+                                        <option value="TO">{% trans %}Tonga{% endtrans %}</option>
+                                        <option value="TT">{% trans %}Trinité-et-Tobago{% endtrans %}</option>
+                                        <option value="TA">{% trans %}Tristan da Cunha{% endtrans %}</option>
+                                        <option value="TN">{% trans %}Tunisie{% endtrans %}</option>
+                                        <option value="TM">{% trans %}Turkménistan{% endtrans %}</option>
+                                        <option value="TR">{% trans %}Turquie{% endtrans %}</option>
+                                        <option value="TV">{% trans %}Tuvalu{% endtrans %}</option>
+                                        <option value="UA">{% trans %}Ukraine{% endtrans %}</option>
+                                        <option value="UY">{% trans %}Uruguay{% endtrans %}</option>
+                                        <option value="VU">{% trans %}Vanuatu{% endtrans %}</option>
+                                        <option value="VE">{% trans %}Venezuela{% endtrans %}</option>
+                                        <option value="VN">{% trans %}Vietnam{% endtrans %}</option>
+                                        <option value="WF">{% trans %}Wallis-et-Futuna{% endtrans %}</option>
+                                        <option value="YE">{% trans %}Yémen{% endtrans %}</option>
+                                        <option value="ZM">{% trans %}Zambie{% endtrans %}</option>
+                                        <option value="ZW">{% trans %}Zimbabwe{% endtrans %}</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-12">
+                                    <label><input type = "checkbox" > {% trans %}Tarif réduit (étudiant, militaire, employé du musée...){% endtrans %} </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 block-contenair-small-left">
+                        <div class="col-md-12 block-contenair-small">
+                            <h2>{% trans %}Billet demi-journée{% endtrans %}</h2>
                             <div class="form-row">
                                 <div class="col-md-6">
                                     <input type="text" class="form-control" placeholder="{% trans %}Nom{% endtrans %}">
@@ -303,321 +583,45 @@
                                         <label><input type = "checkbox" > {% trans %}Tarif réduit (étudiant, militaire, employé du musée...){% endtrans %} </label>
                                 </div>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6 block-contenair-small-left">
-                    <div class="col-md-12 block-contenair-small">
-                        <h2>{% trans %}Billet demi-journée{% endtrans %}</h2>
-                        <form action="/ticketing/pannier" methode="get">
-                            <div class="form-row">
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="{% trans %}Nom{% endtrans %}">
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="{% trans %}Prenom{% endtrans %}">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <input type="date" class="form-control" id="input-date">
-                                    <small>{% trans %}Entrez la date de Naissance de la personne.{% endtrans %}</small>
-                                </div>
-                                <div class="col-md-6">
-                                    <select type="text" class="form-control">
-                                        <option value="false">{% trans %}Pays{% endtrans %}</option>
-                                        <option value="FR">{% trans %}France{% endtrans %}</option>
-                                        <option value="AF">{% trans %}Afghanistan{% endtrans %}</option>
-                                        <option value="ZA">{% trans %}Afrique du Sud{% endtrans %}</option>
-                                        <option value="AL">{% trans %}Albanie{% endtrans %}</option>
-                                        <option value="DZ">{% trans %}Algérie{% endtrans %}</option>
-                                        <option value="DE">{% trans %}Allemagne{% endtrans %}</option>
-                                        <option value="AD">{% trans %}Andorre{% endtrans %}</option>
-                                        <option value="AO">{% trans %}Angola{% endtrans %}</option>
-                                        <option value="AI">{% trans %}Anguilla{% endtrans %}</option>
-                                        <option value="AQ">{% trans %}Antarctique{% endtrans %}</option>
-                                        <option value="AG">{% trans %}Antigua-et-Barbuda{% endtrans %}</option>
-                                        <option value="SA">{% trans %}Arabie saoudite{% endtrans %}</option>
-                                        <option value="AR">{% trans %}Argentine{% endtrans %}</option>
-                                        <option value="AM">{% trans %}Arménie{% endtrans %}</option>
-                                        <option value="AW">{% trans %}Aruba{% endtrans %}</option>
-                                        <option value="AU">{% trans %}Australie{% endtrans %}</option>
-                                        <option value="AT">{% trans %}Autriche{% endtrans %}</option>
-                                        <option value="AZ">{% trans %}Azerbaïdjan{% endtrans %}</option>
-                                        <option value="BS">{% trans %}Bahamas{% endtrans %}</option>
-                                        <option value="BH">{% trans %}Bahreïn{% endtrans %}</option>
-                                        <option value="BD">{% trans %}Bangladesh{% endtrans %}</option>
-                                        <option value="BB">{% trans %}Barbade{% endtrans %}</option>
-                                        <option value="BE">{% trans %}Belgique{% endtrans %}</option>
-                                        <option value="BZ">{% trans %}Belize{% endtrans %}</option>
-                                        <option value="BJ">{% trans %}Bénin{% endtrans %}</option>
-                                        <option value="BM">{% trans %}Bermudes{% endtrans %}</option>
-                                        <option value="BT">{% trans %}Bhoutan{% endtrans %}</option>
-                                        <option value="BY">{% trans %}Biélorussie{% endtrans %}</option>
-                                        <option value="BO">{% trans %}Bolivie{% endtrans %}</option>
-                                        <option value="BA">{% trans %}Bosnie-Herzégovine{% endtrans %}</option>
-                                        <option value="BW">{% trans %}Botswana{% endtrans %}</option>
-                                        <option value="BR">{% trans %}Brésil{% endtrans %}</option>
-                                        <option value="BN">{% trans %}Brunéi Darussalam{% endtrans %}</option>
-                                        <option value="BG">{% trans %}Bulgarie{% endtrans %}</option>
-                                        <option value="BF">{% trans %}Burkina Faso{% endtrans %}</option>
-                                        <option value="BI">{% trans %}Burundi{% endtrans %}</option>
-                                        <option value="KH">{% trans %}Cambodge{% endtrans %}</option>
-                                        <option value="CM">{% trans %}Cameroun{% endtrans %}</option>
-                                        <option value="CA">{% trans %}Canada{% endtrans %}</option>
-                                        <option value="CV">{% trans %}Cap-Vert{% endtrans %}</option>
-                                        <option value="EA">{% trans %}Ceuta et Melilla{% endtrans %}</option>
-                                        <option value="CL">{% trans %}Chili{% endtrans %}</option>
-                                        <option value="CN">{% trans %}Chine{% endtrans %}</option>
-                                        <option value="CY">{% trans %}Chypre{% endtrans %}</option>
-                                        <option value="CO">{% trans %}Colombie{% endtrans %}</option>
-                                        <option value="KM">{% trans %}Comores{% endtrans %}</option>
-                                        <option value="CG">{% trans %}Congo-Brazzaville{% endtrans %}</option>
-                                        <option value="CD">{% trans %}Congo-Kinshasa{% endtrans %}</option>
-                                        <option value="KP">{% trans %}Corée du Nord{% endtrans %}</option>
-                                        <option value="KR">{% trans %}Corée du Sud{% endtrans %}</option>
-                                        <option value="CR">{% trans %}Costa Rica{% endtrans %}</option>
-                                        <option value="CI">{% trans %}Côte d’Ivoire{% endtrans %}</option>
-                                        <option value="HR">{% trans %}Croatie{% endtrans %}</option>
-                                        <option value="CU">{% trans %}Cuba{% endtrans %}</option>
-                                        <option value="CW">{% trans %}Curaçao{% endtrans %}</option>
-                                        <option value="DK">{% trans %}Danemark{% endtrans %}</option>
-                                        <option value="DG">{% trans %}Diego Garcia{% endtrans %}</option>
-                                        <option value="DJ">{% trans %}Djibouti{% endtrans %}</option>
-                                        <option value="DM">{% trans %}Dominique{% endtrans %}</option>
-                                        <option value="EG">{% trans %}Égypte{% endtrans %}</option>
-                                        <option value="SV">{% trans %}El Salvador{% endtrans %}</option>
-                                        <option value="AE">{% trans %}Émirats arabes unis{% endtrans %}</option>
-                                        <option value="EC">{% trans %}Équateur{% endtrans %}</option>
-                                        <option value="ER">{% trans %}Érythrée{% endtrans %}</option>
-                                        <option value="ES">{% trans %}Espagne{% endtrans %}</option>
-                                        <option value="EE">{% trans %}Estonie{% endtrans %}</option>
-                                        <option value="VA">{% trans %}État de la Cité du Vatican{% endtrans %}</option>
-                                        <option value="FM">{% trans %}États fédérés de Micronésie{% endtrans %}</option>
-                                        <option value="US">{% trans %}États-Unis{% endtrans %}</option>
-                                        <option value="ET">{% trans %}Éthiopie{% endtrans %}</option>
-                                        <option value="EZ">{% trans %}Eurozone{% endtrans %}</option>
-                                        <option value="FJ">{% trans %}Fidji{% endtrans %}</option>
-                                        <option value="FI">{% trans %}Finlande{% endtrans %}</option>
-                                        <option value="GA">{% trans %}Gabon{% endtrans %}</option>
-                                        <option value="GM">{% trans %}Gambie{% endtrans %}</option>
-                                        <option value="GE">{% trans %}Géorgie{% endtrans %}</option>
-                                        <option value="GS">{% trans %}Géorgie du Sud et îles Sandwich du Sud{% endtrans %}</option>
-                                        <option value="GH">{% trans %}Ghana{% endtrans %}</option>
-                                        <option value="GI">{% trans %}Gibraltar{% endtrans %}</option>
-                                        <option value="GR">{% trans %}Grèce{% endtrans %}</option>
-                                        <option value="GD">{% trans %}Grenade{% endtrans %}</option>
-                                        <option value="GL">{% trans %}Groenland{% endtrans %}</option>
-                                        <option value="GP">{% trans %}Guadeloupe{% endtrans %}</option>
-                                        <option value="GU">{% trans %}Guam{% endtrans %}</option>
-                                        <option value="GT">{% trans %}Guatemala{% endtrans %}</option>
-                                        <option value="GG">{% trans %}Guernesey{% endtrans %}</option>
-                                        <option value="GN">{% trans %}Guinée{% endtrans %}</option>
-                                        <option value="GQ">{% trans %}Guinée équatoriale{% endtrans %}</option>
-                                        <option value="GW">{% trans %}Guinée-Bissau{% endtrans %}</option>
-                                        <option value="GY">{% trans %}Guyana{% endtrans %}</option>
-                                        <option value="GF">{% trans %}Guyane française{% endtrans %}</option>
-                                        <option value="HT">{% trans %}Haïti{% endtrans %}</option>
-                                        <option value="HN">{% trans %}Honduras{% endtrans %}</option>
-                                        <option value="HU">{% trans %}Hongrie{% endtrans %}</option>
-                                        <option value="CX">{% trans %}Île Christmas{% endtrans %}</option>
-                                        <option value="AC">{% trans %}Île de l’Ascension{% endtrans %}</option>
-                                        <option value="IM">{% trans %}Île de Man{% endtrans %}</option>
-                                        <option value="NF">{% trans %}Île Norfolk{% endtrans %}</option>
-                                        <option value="AX">{% trans %}Îles Åland{% endtrans %}</option>
-                                        <option value="KY">{% trans %}Îles Caïmans{% endtrans %}</option>
-                                        <option value="IC">{% trans %}Îles Canaries{% endtrans %}</option>
-                                        <option value="CC">{% trans %}Îles Cocos{% endtrans %}</option>
-                                        <option value="CK">{% trans %}Îles Cook{% endtrans %}</option>
-                                        <option value="FO">{% trans %}Îles Féroé{% endtrans %}</option>
-                                        <option value="FK">{% trans %}Îles Malouines{% endtrans %}</option>
-                                        <option value="MP">{% trans %}Îles Mariannes du Nord{% endtrans %}</option>
-                                        <option value="MH">{% trans %}Îles Marshall{% endtrans %}</option>
-                                        <option value="UM">{% trans %}Îles mineures éloignées des États-Unis{% endtrans %}</option>
-                                        <option value="PN">{% trans %}Îles Pitcairn{% endtrans %}</option>
-                                        <option value="SB">{% trans %}Îles Salomon{% endtrans %}</option>
-                                        <option value="TC">{% trans %}Îles Turques-et-Caïques{% endtrans %}</option>
-                                        <option value="VG">{% trans %}Îles Vierges britanniques{% endtrans %}</option>
-                                        <option value="VI">{% trans %}Îles Vierges des États-Unis{% endtrans %}</option>
-                                        <option value="IN">{% trans %}Inde{% endtrans %}</option>
-                                        <option value="ID">{% trans %}Indonésie{% endtrans %}</option>
-                                        <option value="IQ">{% trans %}Irak{% endtrans %}</option>
-                                        <option value="IR">{% trans %}Iran{% endtrans %}</option>
-                                        <option value="IE">{% trans %}Irlande{% endtrans %}</option>
-                                        <option value="IS">{% trans %}Islande{% endtrans %}</option>
-                                        <option value="IL">{% trans %}Israël{% endtrans %}</option>
-                                        <option value="IT">{% trans %}Italie{% endtrans %}</option>
-                                        <option value="JM">{% trans %}Jamaïque{% endtrans %}</option>
-                                        <option value="JP">{% trans %}Japon{% endtrans %}</option>
-                                        <option value="JE">{% trans %}Jersey{% endtrans %}</option>
-                                        <option value="JO">{% trans %}Jordanie{% endtrans %}</option>
-                                        <option value="KZ">{% trans %}Kazakhstan{% endtrans %}</option>
-                                        <option value="KE">{% trans %}Kenya{% endtrans %}</option>
-                                        <option value="KG">{% trans %}Kirghizistan{% endtrans %}</option>
-                                        <option value="KI">{% trans %}Kiribati{% endtrans %}</option>
-                                        <option value="XK">{% trans %}Kosovo{% endtrans %}</option>
-                                        <option value="KW">{% trans %}Koweït{% endtrans %}</option>
-                                        <option value="RE">{% trans %}La Réunion{% endtrans %}</option>
-                                        <option value="LA">{% trans %}Laos{% endtrans %}</option>
-                                        <option value="LS">{% trans %}Lesotho{% endtrans %}</option>
-                                        <option value="LV">{% trans %}Lettonie{% endtrans %}</option>
-                                        <option value="LB">{% trans %}Liban{% endtrans %}</option>
-                                        <option value="LR">{% trans %}Libéria{% endtrans %}</option>
-                                        <option value="LY">{% trans %}Libye{% endtrans %}</option>
-                                        <option value="LI">{% trans %}Liechtenstein{% endtrans %}</option>
-                                        <option value="LT">{% trans %}Lituanie{% endtrans %}</option>
-                                        <option value="LU">{% trans %}Luxembourg{% endtrans %}</option>
-                                        <option value="MK">{% trans %}Macédoine{% endtrans %}</option>
-                                        <option value="MG">{% trans %}Madagascar{% endtrans %}</option>
-                                        <option value="MY">{% trans %}Malaisie{% endtrans %}</option>
-                                        <option value="MW">{% trans %}Malawi{% endtrans %}</option>
-                                        <option value="MV">{% trans %}Maldives{% endtrans %}</option>
-                                        <option value="ML">{% trans %}Mali{% endtrans %}</option>
-                                        <option value="MT">{% trans %}Malte{% endtrans %}</option>
-                                        <option value="MA">{% trans %}Maroc{% endtrans %}</option>
-                                        <option value="MQ">{% trans %}Martinique{% endtrans %}</option>
-                                        <option value="MU">{% trans %}Maurice{% endtrans %}</option>
-                                        <option value="MR">{% trans %}Mauritanie{% endtrans %}</option>
-                                        <option value="YT">{% trans %}Mayotte{% endtrans %}</option>
-                                        <option value="MX">{% trans %}Mexique{% endtrans %}</option>
-                                        <option value="MD">{% trans %}Moldavie{% endtrans %}</option>
-                                        <option value="MC">{% trans %}Monaco{% endtrans %}</option>
-                                        <option value="MN">{% trans %}Mongolie{% endtrans %}</option>
-                                        <option value="ME">{% trans %}Monténégro{% endtrans %}</option>
-                                        <option value="MS">{% trans %}Montserrat{% endtrans %}</option>
-                                        <option value="MZ">{% trans %}Mozambique{% endtrans %}</option>
-                                        <option value="MM">{% trans %}Myanmar (Birmanie){% endtrans %}</option>
-                                        <option value="NA">{% trans %}Namibie{% endtrans %}</option>
-                                        <option value="UN">{% trans %}Nations Unies{% endtrans %}</option>
-                                        <option value="NR">{% trans %}Nauru{% endtrans %}</option>
-                                        <option value="NP">{% trans %}Népal{% endtrans %}</option>
-                                        <option value="NI">{% trans %}Nicaragua{% endtrans %}</option>
-                                        <option value="NE">{% trans %}Niger{% endtrans %}</option>
-                                        <option value="NG">{% trans %}Nigéria{% endtrans %}</option>
-                                        <option value="NU">{% trans %}Niue{% endtrans %}</option>
-                                        <option value="NO">{% trans %}Norvège{% endtrans %}</option>
-                                        <option value="NC">{% trans %}Nouvelle-Calédonie{% endtrans %}</option>
-                                        <option value="NZ">{% trans %}Nouvelle-Zélande{% endtrans %}</option>
-                                        <option value="OM">{% trans %}Oman{% endtrans %}</option>
-                                        <option value="UG">{% trans %}Ouganda{% endtrans %}</option>
-                                        <option value="UZ">{% trans %}Ouzbékistan{% endtrans %}</option>
-                                        <option value="PK">{% trans %}Pakistan{% endtrans %}</option>
-                                        <option value="PW">{% trans %}Palaos{% endtrans %}</option>
-                                        <option value="PA">{% trans %}Panama{% endtrans %}</option>
-                                        <option value="PG">{% trans %}Papouasie-Nouvelle-Guinée{% endtrans %}</option>
-                                        <option value="PY">{% trans %}Paraguay{% endtrans %}</option>
-                                        <option value="NL">{% trans %}Pays-Bas{% endtrans %}</option>
-                                        <option value="BQ">{% trans %}Pays-Bas caribéens{% endtrans %}</option>
-                                        <option value="PE">{% trans %}Pérou{% endtrans %}</option>
-                                        <option value="PH">{% trans %}Philippines{% endtrans %}</option>
-                                        <option value="PL">{% trans %}Pologne{% endtrans %}</option>
-                                        <option value="PF">{% trans %}Polynésie française{% endtrans %}</option>
-                                        <option value="PR">{% trans %}Porto Rico{% endtrans %}</option>
-                                        <option value="PT">{% trans %}Portugal{% endtrans %}</option>
-                                        <option value="QA">{% trans %}Qatar{% endtrans %}</option>
-                                        <option value="HK">{% trans %}R.A.S. chinoise de Hong Kong{% endtrans %}</option>
-                                        <option value="MO">{% trans %}R.A.S. chinoise de Macao{% endtrans %}</option>
-                                        <option value="CF">{% trans %}République centrafricaine{% endtrans %}</option>
-                                        <option value="DO">{% trans %}République dominicaine{% endtrans %}</option>
-                                        <option value="RO">{% trans %}Roumanie{% endtrans %}</option>
-                                        <option value="GB">{% trans %}Royaume-Uni{% endtrans %}</option>
-                                        <option value="RU">{% trans %}Russie{% endtrans %}</option>
-                                        <option value="RW">{% trans %}Rwanda{% endtrans %}</option>
-                                        <option value="EH">{% trans %}Sahara occidental{% endtrans %}</option>
-                                        <option value="BL">{% trans %}Saint-Barthélemy{% endtrans %}</option>
-                                        <option value="KN">{% trans %}Saint-Christophe-et-Niévès{% endtrans %}</option>
-                                        <option value="SM">{% trans %}Saint-Marin{% endtrans %}</option>
-                                        <option value="MF">{% trans %}Saint-Martin{% endtrans %}</option>
-                                        <option value="SX">{% trans %}Saint-Martin (partie néerlandaise){% endtrans %}</option>
-                                        <option value="PM">{% trans %}Saint-Pierre-et-Miquelon{% endtrans %}</option>
-                                        <option value="VC">{% trans %}Saint-Vincent-et-les-Grenadines{% endtrans %}</option>
-                                        <option value="SH">{% trans %}Sainte-Hélène{% endtrans %}</option>
-                                        <option value="LC">{% trans %}Sainte-Lucie{% endtrans %}</option>
-                                        <option value="WS">{% trans %}Samoa{% endtrans %}</option>
-                                        <option value="AS">{% trans %}Samoa américaines{% endtrans %}</option>
-                                        <option value="ST">{% trans %}Sao Tomé-et-Principe{% endtrans %}</option>
-                                        <option value="SN">{% trans %}Sénégal{% endtrans %}</option>
-                                        <option value="RS">{% trans %}Serbie{% endtrans %}</option>
-                                        <option value="SC">{% trans %}Seychelles{% endtrans %}</option>
-                                        <option value="SL">{% trans %}Sierra Leone{% endtrans %}</option>
-                                        <option value="SG">{% trans %}Singapour{% endtrans %}</option>
-                                        <option value="SK">{% trans %}Slovaquie{% endtrans %}</option>
-                                        <option value="SI">{% trans %}Slovénie{% endtrans %}</option>
-                                        <option value="SO">{% trans %}Somalie{% endtrans %}</option>
-                                        <option value="SD">{% trans %}Soudan{% endtrans %}</option>
-                                        <option value="SS">{% trans %}Soudan du Sud{% endtrans %}</option>
-                                        <option value="LK">{% trans %}Sri Lanka{% endtrans %}</option>
-                                        <option value="SE">{% trans %}Suède{% endtrans %}</option>
-                                        <option value="CH">{% trans %}Suisse{% endtrans %}</option>
-                                        <option value="SR">{% trans %}Suriname{% endtrans %}</option>
-                                        <option value="SJ">{% trans %}Svalbard et Jan Mayen{% endtrans %}</option>
-                                        <option value="SZ">{% trans %}Swaziland{% endtrans %}</option>
-                                        <option value="SY">{% trans %}Syrie{% endtrans %}</option>
-                                        <option value="TJ">{% trans %}Tadjikistan{% endtrans %}</option>
-                                        <option value="TW">{% trans %}Taïwan{% endtrans %}</option>
-                                        <option value="TZ">{% trans %}Tanzanie{% endtrans %}</option>
-                                        <option value="TD">{% trans %}Tchad{% endtrans %}</option>
-                                        <option value="CZ">{% trans %}Tchéquie{% endtrans %}</option>
-                                        <option value="TF">{% trans %}Terres australes françaises{% endtrans %}</option>
-                                        <option value="IO">{% trans %}Territoire britannique de l’océan Indien{% endtrans %}</option>
-                                        <option value="PS">{% trans %}Territoires palestiniens{% endtrans %}</option>
-                                        <option value="TH">{% trans %}Thaïlande{% endtrans %}</option>
-                                        <option value="TL">{% trans %}Timor oriental{% endtrans %}</option>
-                                        <option value="TG">{% trans %}Togo{% endtrans %}</option>
-                                        <option value="TK">{% trans %}Tokélaou{% endtrans %}</option>
-                                        <option value="TO">{% trans %}Tonga{% endtrans %}</option>
-                                        <option value="TT">{% trans %}Trinité-et-Tobago{% endtrans %}</option>
-                                        <option value="TA">{% trans %}Tristan da Cunha{% endtrans %}</option>
-                                        <option value="TN">{% trans %}Tunisie{% endtrans %}</option>
-                                        <option value="TM">{% trans %}Turkménistan{% endtrans %}</option>
-                                        <option value="TR">{% trans %}Turquie{% endtrans %}</option>
-                                        <option value="TV">{% trans %}Tuvalu{% endtrans %}</option>
-                                        <option value="UA">{% trans %}Ukraine{% endtrans %}</option>
-                                        <option value="UY">{% trans %}Uruguay{% endtrans %}</option>
-                                        <option value="VU">{% trans %}Vanuatu{% endtrans %}</option>
-                                        <option value="VE">{% trans %}Venezuela{% endtrans %}</option>
-                                        <option value="VN">{% trans %}Vietnam{% endtrans %}</option>
-                                        <option value="WF">{% trans %}Wallis-et-Futuna{% endtrans %}</option>
-                                        <option value="YE">{% trans %}Yémen{% endtrans %}</option>
-                                        <option value="ZM">{% trans %}Zambie{% endtrans %}</option>
-                                        <option value="ZW">{% trans %}Zimbabwe{% endtrans %}</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-12">
-                                        <label><input type = "checkbox" > {% trans %}Tarif réduit (étudiant, militaire, employé du musée...){% endtrans %} </label>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                <table class="table" id="table-pannier">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">{% trans %}Type de billet{% endtrans %}</th>
+                            <th scope="col">{% trans %}Temps de visite{% endtrans %}</th>
+                            <th scope="col">{% trans %}Quantité{% endtrans %}</th>
+                            <th scope="col">{% trans %}Prix{% endtrans %}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{% trans %}Billet normal ( à partir de 12 ans ){% endtrans %}</td>
+                            <td>{% trans %}Demi-journée{% endtrans %}</td>
+                            <td>1</td>
+                            <td>18 euros</td>
+                        </tr>
+                        <tr>
+                            <td>{% trans %}Billet enfant ( de 4 à 12 ans ){% endtrans %}</td>
+                            <td>{% trans %}Demi-journée{% endtrans %}</td>
+                            <td>1</td>
+                            <td>10 euros</td>
+                        </tr>
+                        <tr><td class="final-cost">{% trans %}Total TTC{% endtrans %} </td>
+                            <td></td>
+                            <td></td>
+                            <td class="final-cost">28 euros</td>
+                        </tr>
+                        <tr>
+                            <td><button class="btn btn-danger" id="ticket-generation-button">{% trans %}Passer au paiement{% endtrans %}</button></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <table class="table" id="table-pannier">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">{% trans %}Type de billet{% endtrans %}</th>
-                        <th scope="col">{% trans %}Temps de visite{% endtrans %}</th>
-                        <th scope="col">{% trans %}Quantité{% endtrans %}</th>
-                        <th scope="col">{% trans %}Prix{% endtrans %}</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>{% trans %}Billet normal ( à partir de 12 ans ){% endtrans %}</td>
-                        <td>{% trans %}Demi-journée{% endtrans %}</td>
-                        <td>1</td>
-                        <td>18 euros</td>
-                    </tr>
-                    <tr>
-                        <td>{% trans %}Billet enfant ( de 4 à 12 ans ){% endtrans %}</td>
-                        <td>{% trans %}Demi-journée{% endtrans %}</td>
-                        <td>1</td>
-                        <td>10 euros</td>
-                    </tr>
-                    <tr><td class="final-cost">{% trans %}Total TTC{% endtrans %} </td>
-                        <td></td>
-                        <td></td>
-                        <td class="final-cost">28 euros</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        </form>
     </div>
 {% endblock %}

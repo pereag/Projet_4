@@ -5,19 +5,19 @@
 {% set frenchLink = '/fr/ticketing' %}
 {% set englishLink = '/en/ticketing' %}
 
-{% block title %}{% trans %}Billeterie{% endtrans %}{% endblock %}
+{% block title %}{% trans %}Billetterie{% endtrans %}{% endblock %}
 
 {% block body %}
     <div id="banner-ticketing" class="container-fluid">
         <div id="banner-ticketing-content">
-            <h1>{% trans %}Billeterie{% endtrans %}</h1>
-            <p>{% trans %}Bienvenue sur notre billetterie. Des tarifs réduits{% endtrans %}<br> {% trans %}vous sont proposez ci-dessous.{% endtrans %}</p>
+            <h1>{% trans %}Billetterie du Louvre{% endtrans %}</h1>
+            <p>{% trans %}Le musée du Louvre est Ouvert de 8h à 20h tous les jours de l'année{% endtrans %}<br> {% trans %}sauf le mardi, le 1er novembre et le 25 décembre.{% endtrans %}</p>
         </div>
     </div>
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb" id="breadcrumb">
             <li class="breadcrumb-item"><a href="../{{ locale }}">{% trans %}Accueil{% endtrans %}</a></li>
-            <li class="breadcrumb-item active" aria-current="page">{% trans %}Billeterie{% endtrans %}</li>
+            <li class="breadcrumb-item active" aria-current="page">{% trans %}Billetterie{% endtrans %}</li>
         </ol>
     </nav>
     <div id="body">
@@ -27,7 +27,7 @@
                     <tr>
                         <th scope="col">{% trans %}Type de billet{% endtrans %}</th>
                         <th scope="col">{% trans %}Prix de la journée complète{% endtrans %}</th>
-                        <th scope="col">{% trans %}Prix demi-journée{% endtrans %}</th>
+                        <th scope="col">{% trans %}Prix de la demi-journée{% endtrans %}</th>
                     </tr>
                 </thead>
                 <tbody>
