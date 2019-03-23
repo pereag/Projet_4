@@ -10,8 +10,8 @@
 {% block body %}
     <div id="banner-ticketing" class="container-fluid">
         <div id="banner-ticketing-content">
-            <h1>{% trans %} Finalisation de votre commande {% endtrans %}</h1>
-            <p>{% trans %} Veuillez compléter les champs ci-dessous. Après confirmation de votre commande {% endtrans %} </br> {% trans %}vos billets vous seront envoyés via votre messagerie.{% endtrans %} </p>
+            <h1 class="title">{% trans %} Finalisation de votre commande {% endtrans %}</h1>
+            <p class="description">{% trans %} Veuillez compléter les champs ci-dessous. Après confirmation de votre commande {% endtrans %} </br> {% trans %}vos billets vous seront envoyés via votre messagerie.{% endtrans %} </p>
         </div>
     </div>
     <nav aria-label="breadcrumb">
@@ -624,4 +624,9 @@
             </div>
         </form>
     </div>
+{% endblock %}
+
+{% block javascript %}
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script type="text/javascript" src="{{ asset("js/ticketing.js") }}"></script>
 {% endblock %}

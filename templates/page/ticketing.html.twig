@@ -10,8 +10,8 @@
 {% block body %}
     <div id="banner-ticketing" class="container-fluid">
         <div id="banner-ticketing-content">
-            <h1>{% trans %}Billetterie du Louvre{% endtrans %}</h1>
-            <p>{% trans %}Le musée du Louvre est Ouvert de 8h à 20h tous les jours de l'année{% endtrans %}<br> {% trans %}sauf le mardi, le 1er novembre et le 25 décembre.{% endtrans %}</p>
+            <h1 class="title">{% trans %}Billetterie du Louvre{% endtrans %}</h1>
+            <p class="description">{% trans %}Le musée du Louvre est Ouvert de 8h à 20h tous les jours de l'année{% endtrans %}<br> {% trans %}sauf le mardi, le 1er novembre et le 25 décembre.{% endtrans %}</p>
         </div>
     </div>
     <nav aria-label="breadcrumb">
@@ -98,4 +98,9 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block javascript %}
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script type="text/javascript" src="{{ asset("js/ticketing.js") }}"></script>
 {% endblock %}
