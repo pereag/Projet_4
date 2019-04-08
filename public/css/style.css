@@ -4,15 +4,18 @@
         color:white;
     }
     a:link { text-decoration: none; }
-    a:hover {
-        color:rgb(39, 114, 211);
-    }
+    a:hover { color:rgb(39, 114, 211); }
+    a:focus{ outline:0; }
 /*----------Navbar---------*/
     .navbar {
         top: 0;
         position: fixed;
         width: 100%;
         z-index: 1;
+        opacity:0.9;
+    }
+    #language-button {
+        display: flex;
     }
     .button-francais {
         padding: 1rem 1.5rem 1rem 1.5rem;
@@ -29,7 +32,15 @@
     }
     .button-english, .button-francais { margin: -15px 0 -15px 0; }
     #logo { margin: -18px 0 -15px 0; }
-
+    #language-button-mobile { display: none;}
+     @media screen and (max-width: 991px) {
+        #language-button {
+            display: none;
+        }
+        #language-button-mobile {
+            display: block;
+        } 
+     }
 /*----------Loader-------------*/
     #loader {
         position: fixed;
@@ -108,29 +119,27 @@
         50%  { transform: rotate(-160deg); }
         100% { transform: rotate(140deg); }
     }
-    .description{
-        opacity:0;
-    }
+    .description{ opacity:0; }
 /*-----------home-----------*/
     #banner {
-        background-image: url("../images/banner_louvre.jpg");
+        background-image: url("../images/banner-louvre.jpg");
         margin: auto;
-        background-position: center;
+        background-position: center  top;
         text-align: center;
         color: rgb(235, 232, 232);
         width:100%;
+        max-height: 100%;
     }
     #banner h1 {
-        font-size: 4rem;
+        font-size: 64px;
         margin-top: 1rem;
         margin-bottom: 0rem;
         text-shadow: rgb(44, 44, 44) 0em 0em 1em;
-        
         padding: 1rem 1rem 1rem 1rem;
         font-weight: bold;
     }
     #banner p {
-        font-size: 1.7rem;
+        font-size: 27px;
         text-align: center;
         width: 800px;
         display: block;
@@ -145,7 +154,7 @@
     }
     .btn-ticketing {
         background-color: #B20D38;
-        font-size:1.5rem;
+        font-size:24px;
         padding:0.5rem 2rem 0.5rem 2rem;
         margin-top: 1rem;
         border-radius: 5px;
@@ -161,18 +170,17 @@
     #banner-ticketing {
         background-image: url("../images/banner-ticketing.jpg");
         height: 465px;
-        margin-top: 56px;
     }
-    #banner-ticketing-content { padding-top: 140px; }
+    #banner-ticketing-content { padding-top: 160px; }
     #banner-ticketing-content h1,p { 
         text-align:right;
         text-shadow: rgb(44, 44, 44) 0em 0em 1em;
     }
     #banner-ticketing-content h1 { 
-        font-size:3.2rem;
+        font-size:51px;
         font-weight: bold; 
     }
-    #banner-ticketing-content p { font-size: 1.5rem; }
+    #banner-ticketing-content p { font-size: 24px; }
     #breadcrumb {
         background-color: #212529;
         border-radius: 0px;
@@ -189,6 +197,7 @@
     #body {
         background-color:rgb(241, 241, 241);
         padding: 50px 0px 50px 0px;
+        
     }
     #ticketing-content table {
         background-color: #FFFFFF;
@@ -204,39 +213,17 @@
         font-weight: bold;
         padding:1rem 1rem 1rem 1rem;
     }
-    .block-contenair form {
-        padding: 10px 20px 10px 20px;
-    }
-    .block-contenair-small {
-        margin-bottom: 35px;
-    }
-    .block-contenair-small form {
-        padding: 10px 0px 10px 0px
-    }
-    .block-contenair-small h2 {
-        margin: 0px -14px 0px -14px;
-    }    
-    .block-contenair .form-group {
-        margin: 10px 0px 10px 0px;
-    }
-    .block-contenair-small-right {
-        padding:0px 17.5px 0px 0px;
-    }
-    .block-contenair-small-left {
-        padding:0px 0px 0px 17.5px;
-    }
-    #ticket-generation-button {
-        margin: 10px 0px 10px 0px;
-    }
-    .block-contenair-small input, .block-contenair-small select {
-        margin: 10px 0px 10px 0px;
-    }
-    #ticket-place {
-        margin: 0px 0px 0px 0px;
-    }
-    .final-cost {
-        font-weight: bold;
-    }
+    .block-contenair form { padding: 10px 20px 10px 20px; }
+    .block-contenair-small { margin-bottom: 35px; }
+    .block-contenair-small form { padding: 10px 0px 10px 0px }
+    .block-contenair-small h2 { margin: 0px -14px 0px -14px; }    
+    .block-contenair .form-group { margin: 10px 0px 10px 0px; }
+    .block-contenair-small-right { padding:0px 17.5px 0px 0px; }
+    .block-contenair-small-left { padding:0px 0px 0px 17.5px; }
+    #ticket-generation-button { margin: 10px 0px 10px 0px; }
+    .block-contenair-small input, .block-contenair-small select { margin: 10px 0px 10px 0px; }
+    #ticket-place { margin: 0px 0px 0px 0px; }
+    .final-cost { font-weight: bold; }
 /*-----------footer-----------*/
     #footer {
         min-height:130px;
@@ -258,4 +245,25 @@
         background-color: #CD0E3F;
         border:none;
         color: white;
+    }
+
+    footer {
+        position: absolute;
+bottom: 0;
+width: 100%;
+    }
+    @media screen and (max-width: 992px) {
+        .footer-col-lg-screen{
+            display:none;
+        }
+
+        #footer-content-1 {
+            border: none;
+        }
+    }
+
+    @media screen and (max-width: 575px){
+        #footer-content-2, #footer-content-3 {
+            border:none;
+        }
     }

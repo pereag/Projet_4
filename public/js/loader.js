@@ -3,5 +3,6 @@
         {
             setTimeout(function(){
                 $("#loader").remove();
+                console.log()
             },500)
         });
